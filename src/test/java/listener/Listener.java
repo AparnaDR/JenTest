@@ -12,7 +12,7 @@ public class Listener implements ITestListener{
 	}
 
 	public void onStart(ITestContext result) {
-		System.out.println("STARTING the TC " + result.getName());
+		System.out.println("STARTING the TC :::::" + result.getName());
 		
 	}
 
