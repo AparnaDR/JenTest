@@ -1,10 +1,16 @@
 package listener;
 
+import java.io.IOException;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import util.UtilClass;
+
 public class Listener implements ITestListener{
+	
+	UtilClass util;
 
 	public void onFinish(ITestContext result) {
 		System.out.println("the name of the FINISHED TC is " + result.getName());
@@ -13,6 +19,8 @@ public class Listener implements ITestListener{
 
 	public void onStart(ITestContext result) {
 		System.out.println("STARTING the TC :::::" + result.getName());
+		
+		
 		
 	}
 
@@ -23,6 +31,7 @@ public class Listener implements ITestListener{
 
 	public void onTestFailure(ITestResult result) {
 		System.out.println("the name of the FAILED TC is " + result.getName());
+		
 
 	}
 
@@ -38,6 +47,7 @@ public class Listener implements ITestListener{
 
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("TEST SUCCESS " + result.getStatus());
+		
 		
 	}
 

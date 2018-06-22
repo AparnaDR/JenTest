@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 public class LoginPO {
+	static Logger Log = Logger.getLogger(LoginPO.class);
 	
 	WebDriver driver;
 	
@@ -72,7 +74,9 @@ public class LoginPO {
     
     public void AsertLogin(String msg)
     {
-    	Assert.assertEquals(welcome.getText(), msg , "Not Logged In");
+    
+    	Assert.assertEquals(welcome.getText(), msg , "Invalid Login");
+    	
     }
 
     
@@ -94,6 +98,8 @@ public class LoginPO {
     public void loginToApplication(String strUserName,String strPasword){
 
         //Fill user name
+		Log.info("Login_Page_Object_Class- To load all the Webelements for Login page ");
+
 
         this.setUserName(strUserName);
 

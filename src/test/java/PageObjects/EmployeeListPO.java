@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,9 +10,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import java.util.List;
 
 public class EmployeeListPO {
+	
+	static Logger Log = Logger.getLogger(EmployeeListPO.class);
 
 	WebDriver driver;
 
@@ -67,6 +71,7 @@ public class EmployeeListPO {
 
 	public void verifyNewlyAddedEmployee(String firstName) throws Exception
 	{
+		Log.info("EmployeeList_Page_Object_Class- To load all the Webelement for Employee list page ");
 		this.clickPIM();
 		this.clickEmployeeList();
 		Thread.sleep(2000);

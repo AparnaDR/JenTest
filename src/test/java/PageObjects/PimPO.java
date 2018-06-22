@@ -1,12 +1,13 @@
 package PageObjects;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class PimPO {
-	
+	static Logger Log = Logger.getLogger(PimPO.class);
 	WebDriver driver;
 	
 	@FindBy(id = "menu_pim_viewPimModule")
@@ -60,7 +61,8 @@ public class PimPO {
 	}
 	
 	public void AddNewEmployee(String firstName, String lastName) throws InterruptedException{
-		
+		Log.info("PimPO_Page_Object_Class- To load all the Webelements for Add Employee page");
+
 		this.clickPIM();
 		clickEmployeeList();
 		Thread.sleep(3000);

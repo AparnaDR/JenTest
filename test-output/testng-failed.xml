@@ -2,15 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="listener.ReportListener"/>
+    <listener class-name="qa.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
   <test name="Test(failed)">
     <classes>
       <class name="learning.TestClass">
         <methods>
           <include name="setup"/>
+          <include name="test_Home_Page_Appear_Correct" invocation-numbers="1 1 1"/>
           <include name="close"/>
-          <include name="verifyEmp"/>
         </methods>
       </class> <!-- learning.TestClass -->
     </classes>

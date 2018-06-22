@@ -25,6 +25,14 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+
+
 		<!-- Core selenium jars -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
