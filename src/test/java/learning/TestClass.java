@@ -38,6 +38,7 @@ public class TestClass {
 		driver.get("http://opensource.demo.orangehrmlive.com/");
 		Log.info("URL launched");
 		System.out.println("Test");
+		System.out.println("Test git");
 		
 	}
 
